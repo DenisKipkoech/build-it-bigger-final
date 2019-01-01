@@ -17,7 +17,7 @@ public class JokesClass {
     public String getJoke(){
         Random random = new Random();
         int size = jokes.length;
-        int index = random.nextInt(size + 1);
+        int index = random.nextInt(size);
 
         return jokes[index];
     }

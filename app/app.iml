@@ -170,5 +170,6 @@
     <orderEntry type="library" name="com.google.android.gms:play-services-gass-11.8.0" level="project" />
     <orderEntry type="library" name="android.arch.core:runtime-1.1.0" level="project" />
     <orderEntry type="module" module-name="JokesLib" />
+    <orderEntry type="module" module-name="jokedisplaylibrary" />
   </component>
 </module>
