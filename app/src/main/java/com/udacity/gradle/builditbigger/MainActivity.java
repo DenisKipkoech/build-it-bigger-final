@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.jokedisplaylibrary.JokeActivity;
-import com.example.jokeslib.JokesClass;
+//import com.example.jokeslib.JokesClass;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
     }
 
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     public void tellJoke(View view) {
         new EndpointAsync().execute(this);
     }

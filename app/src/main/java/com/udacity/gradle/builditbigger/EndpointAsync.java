@@ -17,7 +17,7 @@ import java.io.IOException;
  * Created by denis on 31/12/18.
  */
 
-public class EndpointAsync extends AsyncTask< Context, Void, String> {
+public class EndpointAsync extends AsyncTask<Context, Void, String> {
     private static MyApi apiService = null;
     private Context context;
     @Override
@@ -41,7 +41,8 @@ public class EndpointAsync extends AsyncTask< Context, Void, String> {
         try{
             return apiService.sendJoke().execute().getData();
         }catch (IOException e){
-           return e.getMessage();
+//           return e.getMessage();
+            return null;
         }
     }
 
