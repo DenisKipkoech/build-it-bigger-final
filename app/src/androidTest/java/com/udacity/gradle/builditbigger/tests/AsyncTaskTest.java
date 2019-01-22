@@ -18,5 +18,26 @@ import java.util.concurrent.CountDownLatch;
  */
 @RunWith(AndroidJUnit4.class)
 public class AsyncTaskTest {
+    Context context;
 
+    @Test
+    public void jokeNotNull() throws InterruptedException{
+        Assert.assertTrue(true);
+        final CountDownLatch latch = new CountDownLatch(1);
+        context = InstrumentationRegistry.getContext();
+        EndpointAsync testAsync = new EndpointAsync(){
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                Assert.assertNotNull(s);
+                if (s != null){
+                    Assert.assertTrue(s.length() > 0);
+                    latch.countDown();
+                }
+            }
+        };
+
+        testAsync.execute(context);
+        latch.await();
+    }
 }
